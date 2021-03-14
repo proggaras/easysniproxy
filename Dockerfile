@@ -1,11 +1,9 @@
 FROM alpine:latest
 
 RUN apk add --no-cache\
-      sniproxy vim wget bash iputils 
+      sniproxy bash 
 
 ADD ./sniproxy.conf /etc/sniproxy.conf
 
-
-WORKDIR /root
-
+EXPOSE 80 443
 CMD $(which sniproxy) -c /etc/sniproxy.conf -f
