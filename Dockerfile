@@ -3,7 +3,7 @@ FROM alpine:latest
 RUN apk add --no-cache\
       sniproxy vim wget bash iputils 
 
-ADD ./sniproxy.conf /etc/sniproxy/sniproxy.conf
+ADD ./sniproxy.conf /etc/sniproxy.conf
 
 
 WORKDIR /root
