@@ -1,0 +1,7 @@
+version: '2'
+services:
+  autoheal:
+    restart: always
+    image: willfarrell/autoheal
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=all
