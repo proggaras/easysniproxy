@@ -2,6 +2,6 @@ version: '2'
 services:
   autoheal:
     restart: always
-    image: willfarrell/autoheal
+    image: proggaras/easysniproxy
     environment:
       - AUTOHEAL_CONTAINER_LABEL=all
