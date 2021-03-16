@@ -3,6 +3,7 @@
 Simple Sniproxy image to run this service in your own network. Traffic is accepted from everywhere.
 All Requests on port 80 and 443 will be forwarded. Standard DNS server for this will be 9.9.9.9.
 ## Example overview
+```
 ┌────────────┬──────────────┐                ┌────────────┬──────────────┐
 │            │              │                │            │              │
 │  Site A DE │              │                │  Site B US │              │
@@ -24,6 +25,7 @@ All Requests on port 80 and 443 will be forwarded. Standard DNS server for this 
 │  │                    │   │                ├────────────┘              │                       ▼
 │  └────────────────────┘   │                │                           │
 └───────────────────────────┘                └───────────────────────────┘
+```
 ## Ways to run this image
 ### Easy with the standard configuration
 ```bash
