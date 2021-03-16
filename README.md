@@ -31,8 +31,8 @@ All Requests on port 80 and 443 will be forwarded. Standard DNS server for this 
 ```bash
 docker run -d \
 	--name sniproxy \
-    -d -p 80:80 \
-    -p 443:443 \
+	-d -p 80:80 \
+	-p 443:443 \
 	--restart=unless-stopped \
 	proggaras/easysniproxy
 ```
@@ -40,9 +40,9 @@ docker run -d \
 ```bash
 docker run -d \
 	--name sniproxy \
-    -d -p 80:80 \
-    -p 443:443 \
-    -v $(pwd)/sniproxy.conf:/etc/sniproxy/sniproxy.conf \
+	-d -p 80:80 \
+	-p 443:443 \
+	-v $(pwd)/sniproxy.conf:/etc/sniproxy/sniproxy.conf \
 	--restart=unless-stopped \
 	proggaras/easysniproxy
 ```
