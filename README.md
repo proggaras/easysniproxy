@@ -2,7 +2,7 @@
 ## Description
 Simple Sniproxy image to run this service in your own network. Traffic is accepted from everywhere.
 All Requests on port 80 and 443 will be forwarded. Standard DNS server for this will be 9.9.9.9.
-##
+## Updates
 The image should be rebuild with each git commit. Also an update of the alpine base image should trigger a new build. 
 ## Example overview
 ```
