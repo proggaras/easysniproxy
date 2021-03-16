@@ -1,8 +1,8 @@
 # easysniproxy
-
-Simple Sniproxy to run in you own network. Forwards all traffic on port 80 and 443. 
-
-Easy way to start:
+## Description
+Simple Sniproxy image to run this service in your own network. Traffic is accepted from everywhere.
+All Requests on port 80 and 443 will be forwarded. Standard DNS server for this will be 9.9.9.9.
+## Start this container with the standard configuration inside the Docker Image
 ```bash
 docker run -d \
 	--name sniproxy \
@@ -11,8 +11,7 @@ docker run -d \
 	--restart=unless-stopped \
 	proggaras/easysniproxy
 ```
-
-If you have to adapt the config you can mount them by yourself into the container:
+## Mount yout own configuration into the Docker container
 ```bash
 docker run -d \
 	--name sniproxy \

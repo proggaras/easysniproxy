@@ -1,7 +1,0 @@
-version: '2'
-services:
-  autoheal:
-    restart: always
-    image: proggaras/easysniproxy
-    environment:
-      - AUTOHEAL_CONTAINER_LABEL=all
