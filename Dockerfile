@@ -1,7 +1,11 @@
-FROM alpine:latest
+FROM ubuntu:hirsute
 
-RUN apk add --no-cache\
-      sniproxy bash curl
+RUN apt-get update && \
+    apt-get install -y \
+    sniproxy \
+    bash \
+    curl && \
+    apt-get autoremove -y
 
 ADD ./sniproxy.conf /etc/sniproxy/sniproxy.conf
 
