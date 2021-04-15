@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-RUN	apk update \
-	&& apk add sniproxy
+RUN apk add --no-cache\
+      sniproxy bash curl
 
 ADD ./sniproxy.conf /etc/sniproxy.conf
 
