@@ -1,8 +1,8 @@
 FROM ubuntu:hirsute
 
-RUN apt-get update
-RUN apt-get install -y sniproxy bash curl
-RUN apt-get autoremove -y
+RUN apt update
+RUN apt install -y sniproxy bash curl
+RUN apt autoremove -y
 
 RUN apt-get update && \
     apt-get install -y \
