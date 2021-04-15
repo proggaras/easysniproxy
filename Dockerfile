@@ -1,10 +1,20 @@
 FROM ubuntu:hirsute
 
+RUN apt-get update
+RUN apt-get install -y sniproxy bash curl
+RUN apt-get autoremove -y
+
 RUN apt-get update && \
     apt-get install -y \
-    sniproxy \
-    bash \
-    curl && \
+    apache2 \
+    libapache2-modsecurity \
+    iproute2 \
+    git \
+    curl \
+    vim \
+    ed \
+    nano \
+    python-pip && \
     apt-get autoremove -y
 
 ADD ./sniproxy.conf /etc/sniproxy/sniproxy.conf
