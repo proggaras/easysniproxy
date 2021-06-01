@@ -8,6 +8,6 @@ ADD ./sniproxy.conf /etc/sniproxy.conf
 EXPOSE 80 443
 
 HEALTHCHECK --timeout=3s CMD \
-  [[ '$(curl -H "Host: pm.me" -o /dev/null -s -w "%{http_code}\n" http://127.0.0.1/)' == "301" ]]
+  curl --fail -H "Host: pm.me" --silent http://127.0.0.1/ || exit 1
 
 CMD $(which sniproxy) -c /etc/sniproxy.conf -f
